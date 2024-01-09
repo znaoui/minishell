@@ -1,0 +1,107 @@
+#PARSING
+echo mdrrrr
+echo "  $?" "$p" "$USER"
+echo "bonj"'our'' 'comm"en"'t'' '"ca v"'a'" ?"
+echo "'$USER'"""$TEST'$'
+echo $TEST_$USER/"$HOME"+
+echo test | cat -e | cat -e | cat -e | cat -e | cat -e | cat -e | cat -e | cat -e | cat -e | cat -e| cat -e
+echo "nnnn >> e > e | >"
+echo $?
+echo p>ftest10
+echo p >ftest10
+echo p >ftest11 l >ftest12
+
+#SYNTAX ERRORS
+echo bonjour | | cat -e
+echo a ||| echo b
+echo r >>
+echo r >
+echo r <
+echo r |
+<<
+>>
+<
+>
+> |
+| >
+|||||||||||||
+>> e |
+echo p >>> mdr
+echo p <<< mdr
+
+#PIPES + REDIRECTIONS
+cat ../Makefile | grep m | cat -e
+cat ../Makefile| grep m | cat -e
+cat ../Makefile | grep m|cat -e
+ls | echo a
+echo mdr|cat -e|grep "m"
+wc < ../Makefile > ftest0 | cat ftest0
+$tt | cat
+yes | head
+>ftest1 echo > ftest>ftest1>ftest>>ftest1>ftest mdr >ftest1 test >ftest | grep "" lol test
+>> ftest3 | ls ftest3
+< ../Makefile
+>ftest4 | ls ftest4
+ls | $tt | cat
+ls | cd $HOME | pwd
+echo mdr | > ftest5 | cat ftest5
+echo mdr >ftest6>ftest7 | grep "" ftest6 ftest7
+>> ftest8 >> ftest9 | grep "" ftest8 ftest9
+echo|cat
+
+#EXECUTION
+$test
+pwd
+cat $tt
+cat ""$tt
+
+#AMBIGUOUS REDIRECT
+< $test
+> $test
+>> $test
+
+#env -i + BUILTINS
+echo OK
+/bin/echo "ok $USER"
+cd . | pwd
+export test=b | env | /bin/grep test
+export PWD+=abc | env | /bin/grep PWD=
+export lol="$lol,ahah" | env | /bin/grep lol=
+export abc+=def | env | /bin/grep abc=
+cd ../../../ | pwd
+cd / | pwd
+cd // | pwd
+cd /bin | pwd
+unset PWD | env | /bin/grep PWD=
+/bin/echo ok | exit 120 | /bin/echo $?
+$test
+echo "" '' "" ok ''
+echo ok -n -n -n -n -n -n
+echo "" -n
+echo ooooooooooooooooo aaaaaaaaaaaaaaaaaa ppppppp                   aaaaaaaaa             l
+echo a '' b '' c '' d
+echo
+echo | echo | echo
+
+#EXIT
+exit 0
+exit -10
+exit -256
+exit 120
+exit 1
+exit 256
+exit 333
+exit -333
+exit
+exit mdr
+exit 0 1 2 3
+exit mdr 10
+exit 10 mdr
+
+#INVALID QUOTES
+echo "
+echo """
+echo '\''
+echo '
+echo ''' ' '
+echo "''''"''"""'"""'
